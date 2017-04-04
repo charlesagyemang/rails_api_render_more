@@ -24,7 +24,7 @@ class CallsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update call" do
-    patch call_url(@call), params: { call: { call_type_icon: @call.call_type_icon, caller_name: @call.caller_name, caller_picture: @call.caller_picture, date: @call.date, number_of_calls: @call.number_of_calls, time_of_call: @call.time_of_call } }, as: :json
+    patch call_url(@call), params: { call: {  caller_name: @call.caller_name, caller_picture: @call.caller_picture, date: @call.date, number_of_calls: @call.number_of_calls, time_of_call: @call.time_of_call } }, as: :json
     assert_response 200
   end
 
